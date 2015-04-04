@@ -1,0 +1,26 @@
+{
+  "name": "dev-norms",
+  "version": "1.3.0",
+  "description": "Sensible starter norms for developers starting or joining a new project.",
+  "main": "index.js",
+  "preferGlobal": "true",
+  "directories": {
+    "bin": "./bin"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Doguhan Uluca <duluca@gmail.com> (http://www.techtalkdc.com)",
+  "license": "ISC",
+  "keywords": [
+    "developer",
+    "team",
+    "norms"
+  ],
+  "dependencies": {
+    "fs": "0.0.2",
+    "path": "^0.11.14",
+    "underscore": "^1.8.3",
+    "yargs": "^3.6.0"
+  }
+}
