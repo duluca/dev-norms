@@ -1,6 +1,6 @@
 {
   "name": "dev-norms",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Sensible starter norms for developers starting or joining a new project.",
   "main": "index.js",
   "preferGlobal": "true",
