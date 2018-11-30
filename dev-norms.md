@@ -1,4 +1,4 @@
-#Norms
+# Norms
 Developer norms are a necessary way to set some ground rules, so your code base can retain some consistency, remain maintainable over the next days, months and years and all developers are on the same page.
 
 Here's a starter list of developer norms:
