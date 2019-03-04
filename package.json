@@ -1,6 +1,6 @@
 {
   "name": "dev-norms",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Sensible starter norms for developers starting or joining a new project.",
   "main": "index.js",
   "directories": {
