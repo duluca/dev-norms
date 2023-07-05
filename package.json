@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "standardize": "prettier '**/*.js' --write || prettier **/*.js --write"
+    "style": "prettier --check \"lib/**/*.js\"",
+    "style:fix": "npm run style -- --write"
   },
   "author": "Doguhan Uluca <duluca@gmail.com> (http://www.techtalkdc.com)",
   "license": "ISC",
@@ -22,17 +23,9 @@
     "norms"
   ],
   "dependencies": {
-    "path": "^0.12.7",
-    "request": "^2.88.0",
-    "yargs": "^13.2.1"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
-  },
-  "prettier": {
-    "printWidth": 90,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "prettier": "^2.8.8"
   }
 }

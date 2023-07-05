@@ -1,1 +1,1 @@
-require('./lib/dev-norms')
+import './lib/dev-norms';
