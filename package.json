@@ -1,6 +1,7 @@
 {
   "name": "dev-norms",
-  "version": "1.7.2",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Sensible starter norms for developers starting or joining a new project.",
   "main": "index.js",
   "directories": {
@@ -23,7 +24,7 @@
     "norms"
   ],
   "dependencies": {
-    "yargs": "^17.7.2"
+    "commander": "^11.0.0"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
