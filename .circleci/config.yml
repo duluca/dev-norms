@@ -24,7 +24,7 @@ jobs:
       - run: cp *.tgz /tmp/circle-artifacts
       - store_artifacts:
           path: /tmp/circle-artifacts
-          destination: angular-unit-test-helper.tgz
+          destination: dev-norms.tgz
       - run:
           name: Move compiled app to workspace
           command: |
