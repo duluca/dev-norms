@@ -16,7 +16,7 @@
     "style:fix": "npm run style -- --write",
     "start": "node index.js",
     "test": "node --test",
-    "test:ci": "node --test --test-reporter tap --test-reporter-destination=./test_results/results.txt"
+    "test:ci": "node --test --test-reporter tap --test-reporter-destination=./test_results/results.xml"
   },
   "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
   "license": "ISC",
