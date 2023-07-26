@@ -1,9 +1,9 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/repo
     docker:
       - image: cimg/node:current
+    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
@@ -20,3 +20,29 @@ jobs:
           command: npm run test:ci
       - store_test_results:
           path: ~/repo/test_results
+  deploy:
+    docker:
+      - image: cimg/node:current
+    working_directory: ~/repo
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run: npm ci
+      - run: npm publish
+workflows:
+  build-and-deploy:
+    jobs:
+      - build
+      - hold:
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
+      - deploy:
+          requires:
+            - hold
