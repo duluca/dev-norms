@@ -1,6 +1,6 @@
 # Quickstart
 
-Add sensible developer norms to your project by executing:
+Add developer norms and a PR template to your project by executing:
 
 `npx dev-norms create`
 
