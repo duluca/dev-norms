@@ -1,1 +1,3 @@
-import './lib/dev-norms';
+#! /usr/bin/env node
+
+import './lib/dev-norms.js';

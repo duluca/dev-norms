@@ -12,9 +12,10 @@
     "url": "https://github.com/duluca/dev-norms.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "style": "prettier --check \"lib/**/*.js\"",
-    "style:fix": "npm run style -- --write"
+    "style:fix": "npm run style -- --write",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Doguhan Uluca <duluca@gmail.com> (http://www.techtalkdc.com)",
   "license": "ISC",
@@ -24,7 +25,9 @@
     "norms"
   ],
   "dependencies": {
-    "commander": "^11.0.0"
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "ora": "^6.3.1"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
