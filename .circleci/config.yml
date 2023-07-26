@@ -9,7 +9,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
-          name: install dependencies
+          name: Install dependencies
           command: npm ci
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
@@ -21,10 +21,12 @@ jobs:
       - store_test_results:
           path: ~/repo/test_results
       - run: npm pack
-      - run: cp *.tgz /tmp/circle-artifacts
+      - run:
+          command: |
+            mkdir -p /tmp/circle-artifacts
+            cp *.tgz /tmp/circle-artifacts
       - store_artifacts:
           path: /tmp/circle-artifacts
-          destination: dev-norms.tgz
       - run:
           name: Move compiled app to workspace
           command: |
