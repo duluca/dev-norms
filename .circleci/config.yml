@@ -19,4 +19,4 @@ jobs:
           name: run tests
           command: npm test
       - store_artifacts:
-          path: ~/repo/tests
+          path: ~/repo/test_results
