@@ -1,20 +1,24 @@
 {
   "name": "dev-norms",
-  "version": "1.7.2",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Sensible starter norms for developers starting or joining a new project.",
   "main": "index.js",
-  "directories": {
-    "bin": "./bin"
+  "bin": {
+    "dev-norms": "./index.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/duluca/dev-norms.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "standardize": "prettier '**/*.js' --write || prettier **/*.js --write"
+    "style": "prettier --check \"lib/**/*.js\"",
+    "style:fix": "npm run style -- --write",
+    "start": "node index.js",
+    "test": "node --test",
+    "test:ci": "node --test | tap-xunit > ./test_results/results.xml"
   },
-  "author": "Doguhan Uluca <duluca@gmail.com> (http://www.techtalkdc.com)",
+  "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
   "license": "ISC",
   "keywords": [
     "developer",
@@ -22,17 +26,12 @@
     "norms"
   ],
   "dependencies": {
-    "path": "^0.12.7",
-    "request": "^2.88.0",
-    "yargs": "^13.2.1"
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "ora": "^6.3.1",
+    "tap-xunit": "^2.4.1"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
-  },
-  "prettier": {
-    "printWidth": 90,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "prettier": "^2.8.8"
   }
 }
