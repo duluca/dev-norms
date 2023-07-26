@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: cimg/node:20
+      - image: cimg/node:current
     steps:
       - checkout
       - restore_cache:
