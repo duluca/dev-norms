@@ -21,10 +21,12 @@ jobs:
       - store_test_results:
           path: ~/repo/test_results
       - run: npm pack
-      - run: cp *.tgz /tmp/circle-artifacts
+      - run:
+          command: |
+            mkdir -p /tmp/circle-artifacts
+            cp *.tgz /tmp/circle-artifacts
       - store_artifacts:
           path: /tmp/circle-artifacts
-          destination: .
       - run:
           name: Move compiled app to workspace
           command: |
