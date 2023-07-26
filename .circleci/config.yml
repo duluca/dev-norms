@@ -17,6 +17,6 @@ jobs:
             - ./node_modules
       - run:
           name: run tests
-          command: npm test
+          command: npm run test:ci
       - store_artifacts:
           path: ~/repo/test_results
