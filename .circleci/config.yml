@@ -24,7 +24,6 @@ jobs:
       - run: cp *.tgz /tmp/circle-artifacts
       - store_artifacts:
           path: /tmp/circle-artifacts
-          destination: $CIRCLE_PROJECT_REPONAME.tgz
       - run:
           name: Move compiled app to workspace
           command: |
