@@ -20,6 +20,21 @@ jobs:
           command: npm run test:ci
       - store_test_results:
           path: ~/repo/test_results
+      - run: npm pack
+      - run: cp *.tgz /tmp/circle-artifacts
+      - store_artifacts:
+          path: /tmp/circle-artifacts
+          destination: angular-unit-test-helper.tgz
+      - run:
+          name: Move compiled app to workspace
+          command: |
+            set -exu
+            mkdir -p /tmp/workspace/pkg
+            mv *.tgz /tmp/workspace/pkg/
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
+            - pkg
   deploy:
     docker:
       - image: cimg/node:current
@@ -28,10 +43,12 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-      - run: npm ci
-      - run: npm publish
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish $(echo /tmp/workspace/pkg/*.tgz)
 workflows:
   build-and-deploy:
     jobs:
