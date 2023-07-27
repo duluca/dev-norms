@@ -1,7 +1,7 @@
 {
   "name": "dev-norms",
-  "description": "Sensible starter norms for developers starting or joining a new project.",
-  "version": "2.0.2",
+  "description": "Create and maintain developer norms and PR template for your project in your repo.",
+  "version": "2.0.4",
   "type": "module",
   "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
   "license": "MIT",
