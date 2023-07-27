@@ -1,7 +1,7 @@
 {
   "name": "dev-norms",
   "description": "Sensible starter norms for developers starting or joining a new project.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
   "license": "MIT",

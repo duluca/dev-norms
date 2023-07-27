@@ -28,3 +28,4 @@ node_modules
 test_results
 results.xml
 .idea/workspace.xml
+*.test.md
