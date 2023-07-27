@@ -1,11 +1,11 @@
-import { describe, it, afterEach } from 'node:test'
+import { describe, it, beforeEach } from 'node:test'
 import { existsSync, unlinkSync } from 'node:fs'
-import { strictEqual } from 'node:assert'
+import assert from 'node:assert'
 
 import create from '../lib/create-norms.js'
 
-describe('synchronous passing test', () => {
-  it('should pass', async () => {
+describe('create-norms command', () => {
+  it('should create dev-norms.test.md', async () => {
     const expected = true
     const actual = await create(
       'dev-norms.test.md',
@@ -13,10 +13,10 @@ describe('synchronous passing test', () => {
       '.',
       false
     )
-    strictEqual(actual, expected)
+    assert.strictEqual(actual, expected)
   })
 
-  afterEach(() => {
+  beforeEach(() => {
     if (existsSync('dev-norms.test.md')) {
       unlinkSync('dev-norms.test.md')
     }
