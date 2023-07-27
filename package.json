@@ -23,6 +23,8 @@
   "scripts": {
     "style": "prettier --check \"lib/**/*.js\"",
     "style:fix": "npm run style -- --write",
+    "lint": "eslint \"{lib,tests}/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix",
     "start": "node index.js",
     "test": "node --test",
     "test:ci": "node --test | tap-xunit > ./test_results/results.xml"
@@ -33,6 +35,8 @@
     "ora": "^6.3.1"
   },
   "devDependencies": {
+    "@eslint/js": "^8.45.0",
+    "eslint": "^8.45.0",
     "prettier": "^2.8.8",
     "tap-xunit": "^2.4.1"
   }
