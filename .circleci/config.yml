@@ -16,8 +16,15 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: run tests
-          command: npm run test:ci
+          name: Ensure coding standards
+          command: |
+            npm run style
+            npm run lint
+      - run:
+          name: Run tests
+          command: |
+            mkdir -p ~/repo/test_results
+            npm run test:ci
       - store_test_results:
           path: ~/repo/test_results
       - run: npm pack

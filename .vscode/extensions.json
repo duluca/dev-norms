@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "johnpapa.vscode-peacock",
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "PKief.material-icon-theme",
+    "WallabyJs.quokka-vscode",
+    "circleci.circleci",
+    "github.vscode-pull-request-github"
+  ]
+}

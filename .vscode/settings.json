@@ -1,0 +1,37 @@
+{
+  "debug.openExplorerOnEnd": true,
+
+  "editor.tabSize": 2,
+  "editor.rulers": [90],
+  "editor.autoIndent": "full",
+  "editor.cursorBlinking": "solid",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "auto-close-tag.SublimeText3Mode": true,
+  "html.autoClosingTags": false,
+
+  "files.exclude": {
+    "server/**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "server/**/*.js.map": {
+      "when": "$(basename)"
+    }
+  }
+}

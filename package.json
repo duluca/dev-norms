@@ -1,8 +1,15 @@
 {
   "name": "dev-norms",
-  "version": "2.0.0",
-  "type": "module",
   "description": "Sensible starter norms for developers starting or joining a new project.",
+  "version": "2.0.1",
+  "type": "module",
+  "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
+  "license": "MIT",
+  "keywords": [
+    "developer",
+    "team",
+    "norms"
+  ],
   "main": "index.js",
   "bin": {
     "dev-norms": "./index.js"
@@ -11,27 +18,26 @@
     "type": "git",
     "url": "https://github.com/duluca/dev-norms.git"
   },
+  "bugs": "https://github.com/duluca/dev-norms/issues",
+  "homepage": "https://github.com/duluca/dev-norms",
   "scripts": {
     "style": "prettier --check \"lib/**/*.js\"",
     "style:fix": "npm run style -- --write",
+    "lint": "eslint \"{lib,tests}/**/*.js\"",
+    "lint:fix": "npm run lint -- --fix",
     "start": "node index.js",
     "test": "node --test",
     "test:ci": "node --test | tap-xunit > ./test_results/results.xml"
   },
-  "author": "Doguhan Uluca <duluca@gmail.com> (https://expertlysimple.io)",
-  "license": "ISC",
-  "keywords": [
-    "developer",
-    "team",
-    "norms"
-  ],
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.0.0",
-    "ora": "^6.3.1",
-    "tap-xunit": "^2.4.1"
+    "ora": "^6.3.1"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "@eslint/js": "^8.45.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "tap-xunit": "^2.4.1"
   }
 }
