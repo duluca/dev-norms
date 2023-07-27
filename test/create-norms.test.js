@@ -2,7 +2,7 @@ import { describe, it, afterEach } from 'node:test'
 import { existsSync, unlinkSync } from 'node:fs'
 import { strictEqual } from 'node:assert'
 
-import create from './create-norms.js'
+import create from '../lib/create-norms.js'
 
 describe('synchronous passing test', () => {
   it('should pass', async () => {
