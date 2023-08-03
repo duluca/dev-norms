@@ -1,11 +1,11 @@
-import { describe, it, beforeEach } from 'node:test'
+import { describe, test, beforeEach } from 'node:test'
 import { existsSync, unlinkSync } from 'node:fs'
 import assert from 'node:assert'
 
 import create from '../lib/create-norms.js'
 
 describe('create-norms command', () => {
-  it('should create dev-norms.test.md', async () => {
+  test('should create dev-norms.test.md', async () => {
     const expected = true
     const actual = await create(
       'dev-norms.test.md',
